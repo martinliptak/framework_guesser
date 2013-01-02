@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = FrameworkGuesser::VERSION
   gem.authors       = ["Martin Lipták"]
   gem.email         = ["mliptak@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Detection of framework and javascript libraries from HTML code.}
+  gem.summary       = %q{framework_guesser tries to detect frameworks and javascript libraries from HTML code and HTTP headers hash. Some extra information like server, server-side programming language, doctype, meta description and keywords are returned as well.}
+  gem.homepage      = "https://github.com/martinliptak/framework_guesser"
 
   gem.add_dependency "nokogiri"
   
