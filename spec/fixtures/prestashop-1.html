@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sk">
+	<head>
+		<title>Eshop 4dogs</title>
+		<meta name="description" content="Shop powered by PrestaShop" />
+		<meta name="keywords" content="shop, prestashop" />
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+		<meta name="generator" content="PrestaShop" />
+		<meta name="robots" content="index,follow" />
+		<link rel="icon" type="image/vnd.microsoft.icon" href="/img/favicon.ico" />
+		<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+			<script type="text/javascript" src="/js/tools.js"></script>
+		<script type="text/javascript">
+			var baseDir = '/';
+			var static_token = 'f86f833777c753358f2ab0f794eae9a8';
+			var token = 'f576deaaf87c201c9c810e9ea8a57c63';
+			var priceDisplayPrecision = 2;
+		</script>
+		<script type="text/javascript" src="/js/jquery/jquery-1.2.6.pack.js"></script>
+		<script type="text/javascript" src="/js/jquery/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="/js/jquery/jquery.hotkeys-0.7.8-packed.js"></script>
+		<!-- Block search module HEADER -->
+<link rel="stylesheet" type="text/css" href="/css/jquery.autocomplete.css" />
+<script type="text/javascript" src="/js/jquery/jquery.autocomplete.js"></script>
+<!-- Block search module HEADER --><!-- BlockWishlist -->
+<script type="text/javascript" src="/modules/blockwishlist/js/ajax-wishlist.js"></script>
+<!-- END BlockWishlist -->
+</head>
+	
+	<body id="index">
+			<noscript><ul><li>Tento obchod vyžaduje JavaScript. Pros&iacute;m, aktivujte JavaScript vo svojom prehliadači.</li></ul></noscript>
+		<div id="page">
+<!-- Header -->
+			<div>
+				
+				<div id="header">
+					<!-- Block currencies module -->
+<div id="currencies_block_top">
+	<form id="setCurrency" action="/" method="post">
+		<ul>
+							<li class="selected">
+					<a href="javascript:setCurrency(1);" title="Euro">€</a>
+				</li>
+					</ul>
+		<p>
+				<input type="hidden" name="id_currency" id="id_currency" value=""/>
+				<input type="hidden" name="SubmitCurrency" value="" />
+			Mena
+		</p>
+	</form>
+</div>
+<!-- /Block currencies module --><!-- Block permanent links module HEADER -->
+<ul id="header_links">
+	<li id="header_link_contact"><a href="http://www.4dogs.sk/contact-form.php" title="Kontakt">Kontakt</a></li>
+	<li id="header_link_sitemap"><a href="/sitemap.php" title="Mapa">Mapa</a></li>
+	<li id="header_link_bookmark">
+		<script type="text/javascript">writeBookmarkLink('http://www.4dogs.sk/', 'Eshop 4dogs', 'Obľ&uacute;ben&eacute;');</script>
+	</li>
+</ul>
+<!-- /Block permanent links module HEADER --><!-- Block search module TOP -->
+<div id="search_block_top">
+	<form method="get" action="/search.php" id="searchbox">
+	<p>
+		<label for="search_query"><!-- image on background --></label>
+		<input type="hidden" name="orderby" value="position" />
+		<input type="hidden" name="orderway" value="desc" />
+		<input type="text" id="search_query" name="search_query" value="" />
+		<input type="submit" name="submit_search" value="Hľadať" class="button" />
+	</p>
+	</form>
+</div>
+	<script type="text/javascript">
+		
+		
+		function formatSearch(row) {
+			return row[2] + ' > ' + row[1];
+		}
+
+		function redirectSearch(event, data, formatted) {
+			$('#search_query').val(data[1]);
+			document.location.href = data[3];
+		}
+		
+		$('document').ready( function() {
+			$("#search_query").autocomplete(
+				'/search.php', {
+				minChars: 3,
+				max:10,
+				selectFirst:false,
+				width:500,
+				scroll: false,
+				formatItem:formatSearch,
+				extraParams:{ajaxSearch:1,id_lang:4}
+			}).result(redirectSearch)
+		});
+		
+	</script>
+<!-- /Block search module TOP --><!-- Block user information module HEADER -->
+<div id="header_user">
+	<p id="header_user_info">
+		Vitajte,
+					<a href="http://www.4dogs.sk/my-account.php">Prihl&aacute;ste sa</a>
+			</p>
+	<ul id="header_nav">
+		<li id="shopping_cart">
+			<a href="http://www.4dogs.sk/order.php" title="V&aacute;&scaron; n&aacute;kupn&yacute; ko&scaron;&iacute;k">Ko&scaron;&iacute;k</a>
+			<span class="ajax_cart_quantity hidden">0</span>
+			<span class="ajax_cart_product_txt hidden">produkt</span>
+			<span class="ajax_cart_product_txt_s hidden">produkty</span>
+						<span class="ajax_cart_no_product">(pr&aacute;zdny)</span>
+		</li>
+		<li id="your_account"><a href="http://www.4dogs.sk/my-account.php" title="V&aacute;&scaron; &uacute;čet">V&aacute;&scaron; &uacute;čet</a></li>
+	</ul>
+</div>
+<!-- /Block user information module HEADER -->
+                    <h1 id="logo"><a href="/" title="Eshop 4dogs"><img src="/img/logo.gif" alt="Eshop 4dogs" /></a></h1>
+				</div> 
+                    <div id="headertwo">
+                        <div id="headermenu">
+                            <ul>
+                                <li><a href="/" title="Eshop 4dogs">Home</a></li>
+                                <li><a href="/order.php">Košík</a></li>
+                                <li><a href="/my-account.php">Môj účet </a></li>
+                                <li><a href="/sitemap.php">Mapa stránky </a></li>
+                                <li><a href="http://4dogs.sk/cms.php?id_cms=4">Kontakt</a></li>
+                            </ul>
+                        </div>
+                    </div>
+			</div>
+
+			<!-- Left -->
+			<div id="left_column" class="column">
+				<script type="text/javascript" src="/themes/4dogs/js/tools/treeManagement.js"></script>
+
+<!-- Block categories module -->
+<div id="categories_block_left" class="block">
+	<h4>Kateg&oacute;rie</h4>
+	<div class="block_content">
+		<ul class="tree dhtml">
+											<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=5"  title="">AKCIE</a>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=6"  title="">Máme nové šteniatko</a>
+			<ul>
+											<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=34"  title="Pre vaše novonarodené šteniatka vyberáme a doporučujeme produkty z 4dogs.sk.">1-2mesiace</a>
+	</li>														<li class="last">
+	<a href="http://www.4dogs.sk/category.php?id_category=35"  title="Pre rastúce šteniatka doporučujeme tieto produkty z 4dogs.sk">Šteniatka od 2-6 mesiaca</a>
+	</li>							</ul>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=8"  title="">Krmivo a maškrty</a>
+			<ul>
+											<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=24"  title="">Hill´s</a>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=25"  title="">Royal Canin</a>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=26"  title="">Purina Pro Plan</a>
+	</li>														<li class="last">
+	<a href="http://www.4dogs.sk/category.php?id_category=27"  title="">King Belfor</a>
+	</li>							</ul>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=9"  title="">Misky, stojany, krmítka</a>
+			<ul>
+											<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=38"  title="">Nerezové misky</a>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=39"  title="">Keramické misky a nádobky</a>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=42"  title="">Cestovné misky</a>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=41"  title="">Krmítka</a>
+	</li>														<li class="last">
+	<a href="http://www.4dogs.sk/category.php?id_category=40"  title="">Stojany na misky</a>
+	</li>							</ul>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=10"  title=""> Obojky</a>
+			<ul>
+											<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=30"  title="">Kožené</a>
+	</li>														<li class="last">
+	<a href="http://www.4dogs.sk/category.php?id_category=33"  title="">Nylonové</a>
+	</li>							</ul>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=11"  title=""> Vodítka</a>
+			<ul>
+											<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=31"  title="">Nylonové</a>
+	</li>														<li class="last">
+	<a href="http://www.4dogs.sk/category.php?id_category=32"  title="">Kožené</a>
+	</li>							</ul>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=12"  title=""> Postroje a sety</a>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=13"  title="">Pelechy</a>
+			<ul>
+											<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=36"  title="">Mäkké ležadlá</a>
+	</li>														<li class="last">
+	<a href="http://www.4dogs.sk/category.php?id_category=37"  title="">Vankúše a deky</a>
+	</li>							</ul>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=14"  title="">Oblečenie pre psy</a>
+			<ul>
+											<li class="last">
+	<a href="http://www.4dogs.sk/category.php?id_category=28"  title="reflexné vesty, obojky a pod.">Reflexné</a>
+	</li>							</ul>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=15"  title="">Výcvikové pomôcky</a>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=16"  title=""> Tréningové zariadenia</a>
+			<ul>
+											<li class="last">
+	<a href="http://www.4dogs.sk/category.php?id_category=29"  title="Potrebujete mať svojho psa pod okamžitou kontrolou? Chcete ho cvičiť a vychovávať ľahko, rýchlo, presne a účinne? Elektronický výcvikový systém DOGtrace ™ d-control, pozostávajúci z vysielača a obojku, vám pomôže cvičiť vášho psa s efektivitou inými metódami nedosiahnuteľnou. V ruke držaný vysielač (podobný diaľkovému ovládaniu vášho TV prístroja) umožňuje dávať povely na veľkú vzdialenosť. Povely sú trojitého druhu: zvukový varovný signál, krátky upozorňovací elektrický impulz a sada korekčných elektrických impulzov. Intenzitu elektrických impulzov je možné jednoduchým spôsobom nastaviť. Elektronické systémy vysielača a obojku využívajú modernú technológiu na báze jednočipových mikroprocesorov a bezdrôtových komunikácií. Vďaka ergonomickému dizajnu a nízkej hmotnosti obojku je možné ho použiť aj pre rasy psov s malým vzrastom. Obojok je kompaktný a vode odolný.
+
+Obojok môžete začať používať u 6 mesačného šteňaťa, ktoré už absolvovalo základný výcvik &quot;SADNI&quot;, &quot;ĽAHNI&quot;, &quot;Zostaň&quot; alebo aspoň &quot;FUJ&quot;, &quot;NESMIEŠ&quot; ... Náš výcvikový obojok má hneď 3 funkcie: zvukový signál, krátky korekčný impulz a trvalý korekčný impulz. Všetky funkcie sú mimoriadne zaujímavé a užitočné, pretože môžu byť prispôsobené akémukoľvek psovi a akejkoľvek situácii.
+
+Aby pes správne pochopil spojitosť medzi impulzmi a jeho nesprávnym chovaním, stlačte tlačidlo presne vo chvíli, keď váš pes robí niečo nezákonné. Zo začiatku odporúčame začať len so zvukovými signálmi. Tým upútate jeho pozornosť a upozorníte ho, že robí niečo zakázaného. Akonáhle si pes túto spojitosť vytvorí, môžete začať s elektrickými impulzmi pre efektívnejší výcvik. Elektrické impulzy sú nastaviteľné v niekoľkých úrovniach. Stlačením tlačidla krátkeho impulzu vyšlite vášmu psovi upozornenie v podobe elektrického impulzu prenášaného dvoma elektródami umiestnenými na prijímacom obojku po dobu, ktorá je kratšia ako jedna sekunda. Stlačením tlačidla dlhého impulzu vyšlite sadu elektrických impulzov po celú dobu, po ktorú budete držať tlačidlo stlačené, ale s obmedzením max na 8 sekúnd.
+
+zvukový signál predchádzajúci krátkemu alebo trvalému impulzu je veľmi účinný; pes si skoro vytvorí spojenie medzi svojim nesprávnym správaním, zvukovou výstrahou a nepríjemným pocitom.
+
+Náš výcvikový obojok Vám v krátkom čase veľmi výrazne pomôže s výchovou Vášho psa. To znamená, že si v pomerne krátkej dobe zapamätá, že musí počúvať na Vami daný povel, alebo dostane korekčný impulz, ktorého silu si samozrejme môžete zvoliť a väčšina psov reaguje tak, že sa práve po korekčnom impulze obracia do bezpečia ku svojmu pánovi, pretože nie je spojený s nepríjemným pocitom vyvolaným korekčným impulzom. Pes totiž uvažuje na princípe pohodlia-nepohodlia a čo mu nesvedčí, tomu sa snaží vyhnúť - teda poslúchnuť.
+S výcvikovými obojkami DOGtrace je mimoriadne jednoduché naučiť rýchlo psa:
+
+    chôdzi pri nohe bez vodítka
+    spoľahlivému privolaniu (povely &quot;ku mne&quot;, &quot;k nohe&quot;)
+    odnaučení zlozvykov pri každodennom spolužití s ľuďmi, napr branie potravy zo stola, skákanie na ľudí, hrabanie, nežiadúce štekanie a pod
+    odnaučenie prenasledovania zveri a vzďaľovaní sa od svojho pána v prírode
+
+Povely sú trojakého druhu:
+
+    zvukový varovný signál, krátky upozorňovací elektrický impulz a sada korekčných impulzov. Intenzitu korekčných impulzov je možné jednoduchým spôsobom nastaviť.
+    druhým typom je krátky (upozorňovací) elektrický impulz
+    tretí typ povelu (korekčný) tvorí sada korekčných impulzov
+">Elektronické obojky</a>
+	</li>							</ul>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=17"  title="">Ohradky a klietky</a>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=18"  title="">Transport</a>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=19"  title="">Príslušenstvo do auta</a>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=7"  title="">Kozmetika a hygiena</a>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=20"  title=""> Zdravotné potreby</a>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=21"  title=""> Úprava srsti</a>
+	</li>														<li >
+	<a href="http://www.4dogs.sk/category.php?id_category=22"  title="">Hračky pre psov</a>
+	</li>														<li class="last">
+	<a href="http://www.4dogs.sk/category.php?id_category=23"  title="">Dvierka</a>
+	</li>							</ul>
+	</div>
+</div>
+<script type="text/javascript">
+// <![CDATA[
+	// we hide the tree only if JavaScript is activated
+	$('div#categories_block_left ul.dhtml').hide();
+// ]]>
+</script>
+<!-- /Block categories module --><!-- Block manufacturers module -->
+<div id="manufacturers_block_left" class="block blockmanufacturer">
+	<h4><a href="/manufacturer.php" title="V&yacute;robcovia / značky">V&yacute;robcovia / značky</a></h4>
+	<div class="block_content">
+		<ul class="bullet">
+					<li class="first_item"><a href="http://www.4dogs.sk/manufacturer.php?id_manufacturer=8" title="Viac inform&aacute;ci&iacute; Bracco">Bracco</a></li>
+							<li class="item"><a href="http://www.4dogs.sk/manufacturer.php?id_manufacturer=5" title="Viac inform&aacute;ci&iacute; Dog Trace">Dog Trace</a></li>
+							<li class="item"><a href="http://www.4dogs.sk/manufacturer.php?id_manufacturer=6" title="Viac inform&aacute;ci&iacute; Karlie">Karlie</a></li>
+							<li class="item"><a href="http://www.4dogs.sk/manufacturer.php?id_manufacturer=9" title="Viac inform&aacute;ci&iacute; Kerbl">Kerbl</a></li>
+							<li class="item"><a href="http://www.4dogs.sk/manufacturer.php?id_manufacturer=4" title="Viac inform&aacute;ci&iacute; King Belfor">King Belfor</a></li>
+										</ul>
+				<form action="/index.php" method="get">
+			<p>
+				<select id="manufacturer_list" onchange="autoUrl('manufacturer_list', '');">
+					<option value="0">V&scaron;etci v&yacute;robcovia</option>
+									<option value="http://www.4dogs.sk/manufacturer.php?id_manufacturer=8">Bracco</option>
+									<option value="http://www.4dogs.sk/manufacturer.php?id_manufacturer=5">Dog Trace</option>
+									<option value="http://www.4dogs.sk/manufacturer.php?id_manufacturer=6">Karlie</option>
+									<option value="http://www.4dogs.sk/manufacturer.php?id_manufacturer=9">Kerbl</option>
+									<option value="http://www.4dogs.sk/manufacturer.php?id_manufacturer=4">King Belfor</option>
+									<option value="http://www.4dogs.sk/manufacturer.php?id_manufacturer=3">Nobby</option>
+									<option value="http://www.4dogs.sk/manufacturer.php?id_manufacturer=7">Puchi</option>
+								</select>
+			</p>
+		</form>
+		</div>
+</div>
+<!-- /Block manufacturers module --><!-- Block informations module -->
+<div id="informations_block_left" class="block">
+	<h4>Inform&aacute;cie</h4>
+	<ul class="block_content">
+					<li><a href="http://www.4dogs.sk/cms.php?id_cms=1" title="Obchodné podmienky">Obchodné podmienky</a></li>
+					<li><a href="http://www.4dogs.sk/cms.php?id_cms=2" title="Doručenie a platba">Doručenie a platba</a></li>
+					<li><a href="http://www.4dogs.sk/cms.php?id_cms=4" title="KONTAKT">KONTAKT</a></li>
+			</ul>
+</div>
+<!-- /Block informations module --><!-- Block tags module -->
+<div id="tags_block_left" class="block tags_block">
+	<h4>&Scaron;t&iacute;tky</h4>
+	<p class="block_content">
+			<a href="/search.php?tag=King+Belfor" title="Viac o King Belfor" class="tag_level3 first_item">King Belfor</a>
+			<a href="/search.php?tag=Pelechy" title="Viac o Pelechy" class="tag_level3 item">Pelechy</a>
+			<a href="/search.php?tag=Nylonov%C3%A9+obojky" title="Viac o Nylonové obojky" class="tag_level3 item">Nylonové obojky</a>
+			<a href="/search.php?tag=ko%C5%BEen%C3%BD+obojok" title="Viac o kožený obojok" class="tag_level3 item">kožený obojok</a>
+			<a href="/search.php?tag=Nylonov%C3%A9+vod%C3%ADtka" title="Viac o Nylonové vodítka" class="tag_level2 item">Nylonové vodítka</a>
+			<a href="/search.php?tag=%C5%A1teniatka" title="Viac o šteniatka" class="tag_level2 item">šteniatka</a>
+			<a href="/search.php?tag=elektronick%C3%A9+obojky" title="Viac o elektronické obojky" class="tag_level2 item">elektronické obojky</a>
+			<a href="/search.php?tag=nerezov%C3%A9++misky" title="Viac o nerezové  misky" class="tag_level1 item">nerezové  misky</a>
+			<a href="/search.php?tag=ko%C5%BEen%C3%A9+vod%C3%ADtka" title="Viac o kožené vodítka" class="tag_level1 item">kožené vodítka</a>
+			<a href="/search.php?tag=King+Belfor+puppy" title="Viac o King Belfor puppy" class="tag_level1 item">King Belfor puppy</a>
+			<a href="/search.php?tag=reflexn%C3%A1+vesta+pre+psa" title="Viac o reflexná vesta pre psa" class="tag_level1 last_item">reflexná vesta pre psa</a>
+		</p>
+</div>
+<!-- /Block tags module --><!-- Block Newsletter module-->
+
+<div id="newsletter_block_left" class="block">
+	<h4>Odber noviniek</h4>
+	<div class="block_content">
+			<form action="/" method="post">
+			<p><input type="text" name="email" size="18" value="V&aacute;&scaron; e-mail" onfocus="javascript:if(this.value=='V&aacute;&scaron; e-mail')this.value='';" onblur="javascript:if(this.value=='')this.value='V&aacute;&scaron; e-mail';" /></p>
+			<p>
+				<select name="action">
+					<option value="0" selected="selected">Prihl&aacute;siť k odberu</option>
+					<option value="1">Odhl&aacute;siť z odberu</option>
+				</select>
+				<input type="submit" value="ok" class="button_mini" name="submitNewsletter" />
+			</p>
+		</form>
+	</div>
+</div>
+
+<!-- /Block Newsletter module-->
+			</div>
+<!-- Center -->
+			<div id="center_column">
+	<!-- Module Editorial -->
+<div id="editorial_block_center" class="editorial_block">
+	<a href="http://www.4dogs.sk" title="">		<img src="/modules/editorial/homepage_logo.jpg" alt="" />	</a>	 
+			<div class="rte"><p><strong>Vítame Vás v e-shope 4.dogs.sk</strong>.<br />Na základe našich dlhoročných skúseností v chove, vo výcviku a v spolunažívaní s najvernejším priateľom človeka, sme pre Vás vybrali produkty do <strong>4dogs</strong> e-shopu, s ktorými máme sami dobré skúsenosti.<br />Veríme, že sa Vám bude u nás páčiť. Prajeme príjemné chvíle strávené na našej stránke 4.dogs.sk!</p></div></div>
+<!-- /Module Editorial --><!-- MODULE Home Featured Products upraven

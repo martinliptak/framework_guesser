@@ -1,29 +1,45 @@
-# FrameworkGuesser
+# framework_guesser
 
-TODO: Write a gem description
+Framework guesser tries to detect frameworks and javascript libraries from HTML code 
+and HTTP headers hash. Some extra information like server, server-side programming language, doctype, meta description and keywords are returned as well. 
 
-## Installation
+It is used by [statscrawler.com][1] to analyze sites and collect statistics about 
+Internet domains. This is a sample (though working and pretty usable) for everyone 
+interested in framework detection on statscrawler.com.  
 
-Add this line to your application's Gemfile:
-
-    gem 'framework_guesser'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install framework_guesser
+[1]: http://www.statscrawler.com
 
 ## Usage
 
-TODO: Write usage instructions here
+Requires nokogiri and rspec for tests.
 
-## Contributing
+```ruby
+	require 'open-uri'
+	require 'openssl'
+	require 'framework_guesser'
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+	for domain in ['rubyonrails.org', 'drupal.org', 'wordpress.org', 'joomla.org']
+	  begin
+	    open("http://www." + domain,
+	        :read_timeout => 10,
+	        :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE) do |file|
+	        
+	      url = file.base_uri.to_s
+	      
+	      result = FrameworkGuesser.guess(file.meta, file.read)
+	      puts "#{domain} => #{url}"
+	      puts "Description: #{result[:description]}"
+	      puts "Keywords: #{result[:keywords]}"
+	      puts "Server: #{result[:server]}"
+	      puts "Engine: #{result[:engine]}"
+	      puts "Doctype: #{result[:doctype]}"
+	      puts "Framework: #{result[:framework]}"
+	      puts "Features: #{result[:features].join(', ')}"
+	      
+	      puts
+	    end
+	  rescue StandardError => err
+	    puts "#{domain} => #{err.message}"
+	  end
+	end
+```

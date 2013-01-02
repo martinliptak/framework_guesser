@@ -1,0 +1,11 @@
+--- 
+server: nginx
+date: Sun, 21 Aug 2011 10:41:48 GMT
+content-type: text/html
+transfer-encoding: chunked
+connection: keep-alive
+expires: Thu, 19 Nov 1981 08:52:00 GMT
+cache-control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+pragma: no-cache
+vary: User-Agent,Accept-Encoding
+set-cookie: PHPSESSID=80862c20845ba10f70ea124b6794d3f3; path=/

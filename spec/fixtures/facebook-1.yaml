@@ -1,0 +1,11 @@
+--- 
+server: nginx
+date: Sun, 21 Aug 2011 10:41:33 GMT
+content-type: text/html; charset=utf-8
+transfer-encoding: chunked
+connection: keep-alive
+expires: Thu, 19 Nov 1981 08:52:00 GMT
+cache-control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+pragma: no-cache
+vary: User-Agent,Accept-Encoding
+set-cookie: PHPSESSID=562821e1d72e48fcd29ea9df636de9b4; path=/, language=sk; expires=Tue, 20-Sep-2011 10:41:28 GMT; path=/; domain=www.123-olej.sk, currency=EUR; expires=Tue, 20-Sep-2011 10:41:29 GMT; path=/; domain=www.123-olej.sk

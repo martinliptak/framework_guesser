@@ -1,0 +1,8 @@
+--- 
+server: nginx
+date: Sun, 21 Aug 2011 10:41:29 GMT
+content-type: text/html; charset=UTF-8
+transfer-encoding: chunked
+connection: keep-alive
+x-pingback: http://www.123-pneu.sk/xmlrpc.php
+vary: User-Agent,Accept-Encoding

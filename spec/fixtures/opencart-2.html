@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="sk" xml:lang="sk">
+<head>
+<title>DUMAN shop</title>
+<base href="http://dumanshop.sk/" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ie6.css" />
+<script type="text/javascript" src="catalog/view/javascript/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+DD_belatedPNG.fix('img, #header .div3 a, #content .left, #content .right, .box .top');
+</script>
+<![endif]-->
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/thickbox/thickbox-compressed.js"></script>
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/thickbox/thickbox.css" />
+<script type="text/javascript" src="catalog/view/javascript/jquery/tab.js"></script>
+<script type="text/javascript"><!--
+function bookmark(url, title) {
+	if (window.sidebar) { // firefox
+    window.sidebar.addPanel(title, url, "");
+	} else if(window.opera && window.print) { // opera
+		var elem = document.createElement('a');
+		elem.setAttribute('href',url);
+		elem.setAttribute('title',title);
+		elem.setAttribute('rel','sidebar');
+		elem.click();
+	} else if(document.all) {// ie
+   		window.external.AddFavorite(url, title);
+	}
+}
+//--></script>
+</head>
+<body>
+<div id="container">
+<div id="header">
+  <div class="div1">
+    <div class="div2">
+          </div>
+    <div class="div3"><a href="http://dumanshop.sk/index.php?route=product/special" style="background-image: url('catalog/view/theme/default/image/special.png');">Akciový tovar</a><a onclick="bookmark(document.location, 'DUMAN shop');" style="background-image: url('catalog/view/theme/default/image/bookmark.png');">Záložka</a><a href="http://dumanshop.sk/index.php?route=information/contact" style="background-image: url('catalog/view/theme/default/image/contact.png');">Kontakt</a><a href="http://dumanshop.sk/index.php?route=information/sitemap" style="background-image: url('catalog/view/theme/default/image/sitemap.png');">Mapa stránok</a></div>
+    <div class="div4"><a href="http://dumanshop.sk/index.php?route=common/home" id="tab_home">Úvod</a>
+            <a href="http://dumanshop.sk/index.php?route=account/login" id="tab_login">Prihlásiť sa</a>
+            <a href="http://dumanshop.sk/index.php?route=account/account" id="tab_account">Registrácia</a><a href="http://dumanshop.sk/index.php?route=checkout/cart" id="tab_cart">Košík</a><a href="http://dumanshop.sk/index.php?route=checkout/shipping" id="tab_checkout">Pokladňa</a></div>
+    <div class="div5">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="center">
+        <div id="search">
+          <div class="div8">Hľadať:&nbsp;</div>
+          <div class="div9">
+                        <input type="text" value="Kľúčové slová" id="filter_keyword" onclick="this.value = '';" onkeydown="this.style.color = '#000000'" style="color: #999;" />
+                        <select id="filter_category_id">
+              <option value="0">Všetky kategórie</option>
+                          </select>
+          </div>
+          <div class="div10">&nbsp;&nbsp;<a onclick="moduleSearch();" class="button"><span>Hľadať</span></a> <a href="http://dumanshop.sk/index.php?route=product/search">Pokročilé vyhľadávanie</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div6">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center">
+	        <div id="breadcrumb">
+              </div>
+      <div class="div7">
+                <form action="http://dumanshop.sk/index.php?route=common/home" method="post" enctype="multipart/form-data" id="currency_form">
+          <div class="switcher">
+                                    <div class="selected"><a>Euro</a></div>
+                                                                                    <div class="option">
+                            <a onclick="$('input[name=\'currency_code\']').attr('value', 'EUR'); $('#currency_form').submit();">Euro</a>
+                            <a onclick="$('input[name=\'currency_code\']').attr('value', 'GBP'); $('#currency_form').submit();">Pound Sterling</a>
+                            <a onclick="$('input[name=\'currency_code\']').attr('value', 'USD'); $('#currency_form').submit();">US Dollar</a>
+                          </div>
+          </div>
+          <div style="display: inline;">
+            <input type="hidden" name="currency_code" value="" />
+            <input type="hidden" name="redirect" value="http://dumanshop.sk/index.php?route=common/home" />
+          </div>
+        </form>
+                        <form action="http://dumanshop.sk/index.php?route=common/home" method="post" enctype="multipart/form-data" id="language_form">
+          <div class="switcher">
+                                    <div class="selected"><a><img src="image/flags/sk.png" alt="Slovak" />&nbsp;&nbsp;Slovak</a></div>
+                                    <div class="option">
+                            <a onclick="$('input[name=\'language_code\']').attr('value', 'sk'); $('#language_form').submit();"><img src="image/flags/sk.png" alt="Slovak" />&nbsp;&nbsp;Slovak</a>
+                          </div>
+          </div>
+          <div>
+            <input type="hidden" name="language_code" value="" />
+            <input type="hidden" name="redirect" value="http://dumanshop.sk/index.php?route=common/home" />
+          </div>
+        </form>
+              </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript"><!-- 
+function getURLVar(urlVarName) {
+	var urlHalves = String(document.location).toLowerCase().split('?');
+	var urlVarValue = '';
+	
+	if (urlHalves[1]) {
+		var urlVars = urlHalves[1].split('&');
+
+		for (var i = 0; i <= (urlVars.length); i++) {
+			if (urlVars[i]) {
+				var urlVarPair = urlVars[i].split('=');
+				
+				if (urlVarPair[0] && urlVarPair[0] == urlVarName.toLowerCase()) {
+					urlVarValue = urlVarPair[1];
+				}
+			}
+		}
+	}
+	
+	return urlVarValue;
+} 
+
+$(document).ready(function() {
+	route = getURLVar('route');
+	
+	if (!route) {
+		$('#tab_home').addClass('selected');
+	} else {
+		part = route.split('/');
+		
+		if (route == 'common/home') {
+			$('#tab_home').addClass('selected');
+		} else if (route == 'account/login') {
+			$('#tab_login').addClass('selected');	
+		} else if (part[0] == 'account') {
+			$('#tab_account').addClass('selected');
+		} else if (route == 'checkout/cart') {
+			$('#tab_cart').addClass('selected');
+		} else if (part[0] == 'checkout') {
+			$('#tab_checkout').addClass('selected');
+		} else {
+			$('#tab_home').addClass('selected');
+		}
+	}
+});
+//--></script>
+<script type="text/javascript"><!--
+$('#search input').keydown(function(e) {
+	if (e.keyCode == 13) {
+		moduleSearch();
+	}
+});
+
+function moduleSearch() {
+	url = 'index.php?route=product/search';
+	
+	var filter_keyword = $('#filter_keyword').attr('value')
+	
+	if (filter_keyword) {
+		url += '&keyword=' + encodeURIComponent(filter_keyword);
+	}
+	
+	var filter_category_id = $('#filter_category_id').attr('value');
+	
+	if (filter_category_id) {
+		url += '&category_id=' + filter_category_id;
+	}
+	
+	location = url;
+}
+//--></script>
+<script type="text/javascript"><!--
+$('.switcher').bind('click', function() {
+	$(this).find('.option').slideToggle('fast');
+});
+$('.switcher').bind('mouseleave', function() {
+	$(this).find('.option').slideUp('fast');
+}); 
+//--></script>
+<div id="column_left">
+    <div class="box">
+  <div class="top"><img src="catalog/view/theme/default/image/category.png" alt="" />Kategórie</div>
+  <div id="category" class="middle"></div>
+  <div class="bottom">&nbsp;</div>
+</div>
+    <div class="box">
+  <div class="top"><img src="catalog/view/theme/default/image/brands.png" alt="" />Výrobcovia</div>
+  <div class="middle" style="text-align: center;">
+    <select onchange="location = this.value">
+      <option value=""> --- Prosím, vyberte --- </option>
+          </select>
+  </div>
+  <div class="bottom">&nbsp;</div>
+</div>
+    <div class="box">
+  <div class="top"><img src="catalog/view/theme/default/image/information.png" alt="" />Informácie</div>
+  <div id="information" class="middle">
+    <ul>
+            <li><a href="http://dumanshop.sk/about_us">About Us</a></li>
+            <li><a href="http://dumanshop.sk/index.php?route=information/information&amp;information_id=3">Privacy Policy</a></li>
+            <li><a href="http://dumanshop.sk/index.php?route=information/information&amp;information_id=5">Terms &amp; Conditions</a></li>
+            <li><a href="http://dumanshop.sk/index.php?route=information/contact">Kontaktujte nás</a></li>
+      <li><a href="http://dumanshop.sk/index.php?route=information/sitemap">Mapa stránok</a></li>
+    </ul>
+  </div>
+  <div class="bottom">&nbsp;</div>
+</div>  </div>
+<div id="column_right">
+    <div id="module_cart" class="box">
+  <div class="top"><img src="catalog/view/theme/default/image/basket.png" alt="" />Nákupný košík</div>
+  <div class="middle">
+        <div style="text-align: center;">0 položiek</div>
+      </div>
+  <div class="bottom">&nbsp;</div>
+</div>
+<script type="text/javascript" src="catalog/view/javascript/jquery/ajax_add.js"></script>
+
+<script type="text/javascript"><!--
+
+function getUrlParam(name) {
+  var name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.href);
+  if (results == null)
+    return "";
+  else
+    return results[1];
+}
+
+$(document).ready(function () {
+	$('.cart_remove').live('click', function () {
+		if (!confirm('Potvrdiť?')) {
+			return false;
+		}
+		$(this).removeClass('cart_remove').addClass('cart_remove_loading');
+		$.ajax({
+			type: 'post',
+			url: 'index.php?route=module/cart/callback',
+			dataType: 'html',
+			data: 'remove=' + this.id,
+			success: function (html) {
+				$('#module_cart .middle').html(html);
+				if (getUrlParam('route').indexOf('checkout') != -1) {
+					window.location.reload();
+				}
+			}
+		});
+	});
+});
+//--></script>    <div class="box">
+  <div class="top"><img src="catalog/view/theme/default/image/bestsellers.png" alt="" />Najpredávanejšie</div>
+  <div class="middle">
+      </div>
+  <div class="bottom">&nbsp;</div>
+</div>
+    <div class="box">
+  <div class="top"><img src="catalog/view/theme/default/image/featured.png" alt="" />Top produkty</div>
+  <div class="middle">
+      </div>
+  <div class="bottom">&nbsp;</div>
+</div>
+  </div>
+<div id="content">
+        </div>
+<div id="footer">
+  <div class="div1"><a onclick="window.open('https://www.paypal.com/uk/mrb/pal=W9TBB5DTD6QJW');"><img src="catalog/view/theme/default/image/payment.png" alt="" /></a></div>
+
+  <div class="div2">Prevádzkuje <a href="http://microitem.com" target="blank">MIRCOITEM</a> srtfhsafg &copy; 2011</div>
+
+</div>
+</div>
+</body></html> 
